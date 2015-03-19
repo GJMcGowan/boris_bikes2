@@ -1,6 +1,6 @@
 require 'capybara/rspec'
 require 'docking_station'
-feature 'member of public acceses bike' do
+feature 'member of public accesses bike' do
   let(:docking_station) { DockingStation.new }
   scenario 'docking station releases a bike that is not broken' do
     docking_station.dock Bike.new

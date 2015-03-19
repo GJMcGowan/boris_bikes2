@@ -20,7 +20,7 @@ end
 feature 'vans can return bikes to docking station' do
   scenario 'try to return bike, but van is empty' do
     van = Van.new
-    expect { van.return_bike }.to raise_error 'Van Empty'
+    expect { van.return_bike(nil) }.to raise_error 'Van Empty'
   end
   scenario 'van returns bike to docking station' do
     van = Van.new
@@ -28,7 +28,7 @@ feature 'vans can return bikes to docking station' do
     docking_station = DockingStation.new
     van.dock bike
     van_before_unloading = van.bikes
-    van.return_bike
+    van.return_bike(docking_station)
     expect(docking_station.bikes).to eq van_before_unloading
   end
 end

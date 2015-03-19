@@ -1,3 +1,5 @@
+require 'docking_station'
+
 class Van
   attr_reader :bikes
 
@@ -17,7 +19,8 @@ class Van
     nil
   end
 
-  def return_bike
+  def return_bike(docking_station)
     fail 'Van Empty' if @bikes.empty?
+    docking_station.bikes = bikes
   end
 end
