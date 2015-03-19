@@ -23,4 +23,6 @@ class Van
     fail 'Van Empty' if @bikes.empty?
     docking_station.bikes = bikes
   end
+
+  # some method about picking up bikes
 end

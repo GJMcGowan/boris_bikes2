@@ -19,7 +19,6 @@ describe Van do
   it 'returns an error when returning a bike to the docking station' do
     expect { subject.return_bike(nil) }.to raise_error 'Van Empty'
   end
-  it { is_expected.to respond_to :return_bike }
   # it 'can return a bike to the docking station' do
   #   van = Van.new
   #   # bike = Bike.new

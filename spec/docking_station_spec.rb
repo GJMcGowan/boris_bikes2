@@ -25,6 +25,6 @@ describe DockingStation do
   it 'can release a broken bike' do
     broken_bike = double :bike, broken?: true
     subject.dock broken_bike
-    expect { subject.release_broken_bikes }.to be nil
+    expect(subject.release_broken_bikes).to be nil
   end
 end

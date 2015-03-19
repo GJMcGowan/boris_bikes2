@@ -19,6 +19,10 @@ class DockingStation
   end
 
   def release_broken_bikes
+    @bikes.each do |b|
+      thing = b.select(&:broken?)
+      thing
+    end
   end
 
   private
