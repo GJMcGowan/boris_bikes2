@@ -22,7 +22,7 @@ describe Van do
   # it 'can return a bike to the docking station' do
   #   van = Van.new
   #   # bike = Bike.new
-  #   docking_station = double :DockingStation, :bikes :
+  #   docking_station = double :DockingStation, :bikes [bike]
   #   docking_station = DockingStation.new
   #   van.dock double :bike
   #   van_before_unloading = van.bikes
