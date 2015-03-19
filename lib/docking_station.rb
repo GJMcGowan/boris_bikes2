@@ -11,12 +11,14 @@ class DockingStation
   def dock bike
     fail 'Station Full' if full?
     bikes << bike
-    nil
   end
 
   def release_bike
     fail 'No Bikes Available' if empty?
     bikes.pop
+  end
+
+  def release_broken_bikes
   end
 
   private

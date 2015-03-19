@@ -1,8 +1,8 @@
 require 'docking_station'
 
 class Van
-  attr_reader :bikes
-
+  attr_accessor :bikes
+  alias_method :bikes, :bikes=
   def initialize
     @bikes = []
     @capacity = 20

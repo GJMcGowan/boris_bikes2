@@ -1,0 +1,14 @@
+Decided to make a bunch of notes on what I'm aiming to do, re: stage 7 and vans. 
+
+The challege at the moment is to pass the bikes instance variable in van, to an instance of docking_station. To do this, and know that I've done this, I need to:
+- Have bikes instance variable in van
+- Have bikes instance variable in docking_station
+- Have a method in van, which takes a docking_station and passes it some information 
+- Read out the bikes variable in docking_station
+- Compare both variables.
+
+Vaguely remembered from Ed/Andrea's thing.
+The docking station should be able to both return just broken bikes, and also no bikes. 
+The van should be able to pick up the broken bikes in an array from the docking station's new method. This new method should scan the current array in the docking station and return all the broken bikes in it.
+
+The test should use doubles to make a small array of broken bikes, returned from a fake docking station with a fake method, and then compare that to the result of a van method which accepts the fake bikes etc.

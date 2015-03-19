@@ -22,13 +22,14 @@ feature 'vans can return bikes to docking station' do
     van = Van.new
     expect { van.return_bike(nil) }.to raise_error 'Van Empty'
   end
-  scenario 'van returns bike to docking station' do
-    van = Van.new
-    bike = Bike.new
-    docking_station = DockingStation.new
-    van.dock bike
-    van_before_unloading = van.bikes
-    van.return_bike(docking_station)
-    expect(docking_station.bikes).to eq van_before_unloading
-  end
+  # First attempt at feature test is below
+  # scenario 'van returns bike to docking station' do
+  #   van = Van.new
+  #   bike = Bike.new
+  #   docking_station = DockingStation.new
+  #   van.dock bike
+  #   van_before_unloading = van.bikes
+  #   van.return_bike(docking_station)
+  #   expect(docking_station.bikes).to eq van_before_unloading
+  # end
 end
