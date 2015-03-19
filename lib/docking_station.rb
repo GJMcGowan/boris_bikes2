@@ -2,6 +2,7 @@ require_relative 'bike'
 
 class DockingStation
   attr_writer :capacity
+  attr_reader :bikes
   def initialize
     @bikes = []
     @capacity = 20
@@ -19,8 +20,6 @@ class DockingStation
   end
 
   private
-
-  attr_reader :bikes
 
   def empty?
     bikes.reject(&:broken?).length == 0
